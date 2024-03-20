@@ -13,16 +13,16 @@ Consigli del giorno:
 
 // generatore.addEventListener('click', funzione che genera numero);
 
-const stampa = document.getElementById('display');
+const printer = document.getElementById('display');
 const starter = document.querySelector('#generate');
 const squareNum = document.getElementById('nums');
 
 
 //button starter che genera numeri al clic.
 starter.addEventListener('click', function(){
-    
+    printer.innerHTML = '';
 const arrayNums = genNums ();
-makeResultSquare(arrayNums, stampa);
+makeResultSquare(arrayNums, printer);
 
 
 
@@ -47,7 +47,7 @@ function genNums (){
     
     
 }
-function makeResultSquare(array, contenitore){
+function makeResultSquare(array, container){
 
     for (let i = 0; i < array.length; i++) {
         const div = document.createElement("div");
@@ -55,8 +55,8 @@ function makeResultSquare(array, contenitore){
         div.textContent = array[i];
         setTimeout(function(){
             div.textContent = '';
-        }, 3000)
-        contenitore.appendChild(div);
+        }, 30000)
+        container.appendChild(div);
       }
 }
 
