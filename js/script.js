@@ -24,9 +24,19 @@ const happines = document.getElementById('happines');
 const resultDiv = document.getElementById('displayTwo')
 
 
+
+
+
 //button starter che genera numeri al clic.
 starter.addEventListener('click', function () {
-   
+    let times = 30s;
+    let time = setInterval(function(){
+        times--;
+        happines.textContent = times;
+        if(times === 0){
+         clearInterval(time);
+        }
+     }, 1000)
     printer.innerHTML = '';
     const arrayNums = genNums();
     makeResultSquare(arrayNums, printer);
@@ -37,6 +47,8 @@ starter.addEventListener('click', function () {
         resultDiv.classList.remove('d-none')
         
     }, 30000)
+   
+    
  
 
     //questo bottone memorizza e verifica i numeri dell'utente
@@ -46,6 +58,7 @@ starter.addEventListener('click', function () {
         const arrayUser = [];
         verify.classList.add('d-none');
         reset.classList.remove('d-none');
+        
 
 
 
@@ -53,10 +66,7 @@ starter.addEventListener('click', function () {
             const num = parseInt(userNum[i].value);
             if (!isNaN(num) || (num) === 5) {
                 arrayUser.push(num);
-                if(arrayUser.length === 5){
-                    happines.textContent = ('Complimenti hai buona memoria!!!')
-                    
-                }
+                
                
             }else{
                 numsWin.textContent = ('Valore inserito non valido!')
