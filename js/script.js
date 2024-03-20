@@ -14,6 +14,23 @@ Consigli del giorno:
 // generatore.addEventListener('click', funzione che genera numero);
 
 const stampa = document.getElementById('display');
+const starter = document.querySelector('#generate');
+
+
+
+starter.addEventListener('click', function(){
+    console.log('funziona');
+
+const arrayNums = genNums ();
+
+
+makeResultSquare(arrayNums, stampa);
+
+
+})
+
+
+
 
 function genNums (){
 
@@ -29,8 +46,6 @@ function genNums (){
     
     
 }
-const arrayNums = genNums ();
-
 function makeResultSquare(array, contenitore){
     for (let i = 0; i < array.length; i++) {
         const div = document.createElement("div");
@@ -39,18 +54,3 @@ function makeResultSquare(array, contenitore){
         contenitore.appendChild(div);
       }
 }
-
-makeResultSquare(arrayNums, stampa);
-
-
-
-
-
-
-
-
-
-
-
-
-
