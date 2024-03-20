@@ -15,19 +15,20 @@ Consigli del giorno:
 
 const stampa = document.getElementById('display');
 const starter = document.querySelector('#generate');
+const squareNum = document.getElementById('nums');
 
 
-
+//button starter che genera numeri al clic.
 starter.addEventListener('click', function(){
-    console.log('funziona');
-
+    
 const arrayNums = genNums ();
-
-
 makeResultSquare(arrayNums, stampa);
 
 
-})
+
+
+
+});
 
 
 
@@ -47,10 +48,29 @@ function genNums (){
     
 }
 function makeResultSquare(array, contenitore){
+
     for (let i = 0; i < array.length; i++) {
         const div = document.createElement("div");
         div.setAttribute('id', 'nums');
         div.textContent = array[i];
+        setTimeout(function(){
+            div.textContent = '';
+        }, 3000)
         contenitore.appendChild(div);
       }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
