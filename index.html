@@ -15,8 +15,9 @@
 </head>
 
 <body>
-    <div id="display" class="container d-flex flex-wrap justify-content-center align-content-center gap-1  ">
-        
+    <h2 id="happines"></h2>
+    <div id="display" class="container d-flex flex-wrap justify-content-center align-content-center gap-1 my-auto  ">
+
 
 
     </div>
@@ -26,22 +27,23 @@
         <button type="button" id="generate" class="btn btn-primary col-1 mx-auto my-4  ">Start</button>
     </div>
 
-    <div id="displayTwo" class="container p-3">
-        <h3 class="mx-3 fw-bold ">Insersci i numero</h3>
-        <div>
-        <input class="insert" type="text" maxlength="3">
-        <input class="insert" type="text" maxlength="3">
-        <input class="insert" type="text" maxlength="3">
-        <input class="insert" type="text" maxlength="3">
-        <input class="insert" type="text" maxlength="3">
-    </div>
-
-        
-        <button id="verify" type="button" class="btn btn-danger my-4 ">Verifica</button>
+    <div id="displayTwo" class="container p-3 text-center d-none my-auto  ">
+        <h3 class="mx-3 fw-bold ">Inserisci i numeri che ricordi</h3>
+        <div class="d-flex justify-content-center gap-3 ">
+            <input class="insert" type="text" maxlength="3">
+            <input class="insert" type="text" maxlength="3">
+            <input class="insert" type="text" maxlength="3">
+            <input class="insert" type="text" maxlength="3">
+            <input class="insert" type="text" maxlength="3">
+        </div>
+       
         <div id="numsWin"></div>
+      
+        <button id="verify" type="button" class="btn btn-danger  ">Verifica</button>
+        <a href="./index.html" id="again" class="btn btn-dark d-none  ">Next</a>
+         <div id="messageWin" class="fs-2 "></div>
     </div>
-
-
+   
 
 
 
